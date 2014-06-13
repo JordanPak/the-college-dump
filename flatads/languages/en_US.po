@@ -1,0 +1,1105 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: FlatAds\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Alex Gurghis <agurghis@yahoo.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Language: en_US\n"
+"X-Generator: Poedit 1.6.4\n"
+
+#. Text in echo
+#: functions.php:383
+msgid "Followers @"
+msgstr ""
+
+#. Text in echo
+#: functions.php:376
+msgid "Joined "
+msgstr ""
+
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1
+msgid "Dismiss this notice"
+msgstr ""
+
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1 functions.php:682
+msgid "Install Plugins"
+msgstr ""
+
+#. Text in function
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1 functions.php:682
+msgid "Install Required Plugins"
+msgstr ""
+
+#. Text in function
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1 functions.php:682
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. Text in function
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1 functions.php:682
+msgid "Plugin activated successfully."
+msgstr ""
+
+#. Text in function
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1 functions.php:682
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1
+msgid "Return to the dashboard"
+msgstr ""
+
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1
+msgid "Something went wrong."
+msgstr ""
+
+#. Text in function
+#: inc/class-tgm-plugin-activation.php:1
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#. Text in function
+#. Text in echo
+#: inc/plans.php:1 template-profile.php:1034
+msgid "Days"
+msgstr ""
+
+#. Text in function
+#. Text in echo
+#: inc/plans.php:1 template-add-post.php:1014 template-add-post.php:1128
+#: template-pricing-plans.php:724 template-single-version2.php:768
+#: single.php:846 template-tag.php:757 template-edit-profile.php:383
+#: template-edit-profile.php:415 template-profile.php:946
+#: template-edit-post.php:1178 template-edit-post.php:1292
+msgid "Featured Ads"
+msgstr ""
+
+#. Text in function
+#: functions.php:682
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#. Text in function
+#. Text in echo
+#: functions.php:1198 functions.php:1475
+msgid "Categories Custom Fields"
+msgstr ""
+
+#. Text in function
+#: functions.php:1
+msgid "Footer menu"
+msgstr ""
+
+#. Text in function
+#: functions.php:1
+msgid "Main menu"
+msgstr ""
+
+#. Text in function
+#: functions.php:437
+msgid "Number Of Tweets:"
+msgstr ""
+
+#. Text in function
+#: functions.php:682
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. Text in function
+#: functions.php:1 functions.php:386
+msgid "Twitter"
+msgstr ""
+
+#. Text in function
+#: functions.php:411
+msgid "Twitter Consumer Key:"
+msgstr ""
+
+#. Text in function
+#: functions.php:416
+msgid "Twitter Consumer Secret:"
+msgstr ""
+
+#. Text in function
+#: functions.php:432
+msgid "Twitter ID:"
+msgstr ""
+
+#. Text in echo
+#: functions.php:406
+msgid "Twitter Title:"
+msgstr ""
+
+#. Text in function
+#: functions.php:426
+msgid "Twitter User Secret:"
+msgstr ""
+
+#. Text in function
+#: functions.php:421
+msgid "Twitter User Token:"
+msgstr ""
+
+#. Text in function
+#: taxonomy-post_format.php:23
+msgid "%s Archives"
+msgstr ""
+
+#. Text in function
+#: comments.php:46
+msgid "&larr; Older Comments"
+msgstr ""
+
+#. Text in function
+#: functions.php:1198
+msgid ", "
+msgstr ""
+
+#. Text in function
+#: functions.php:1158
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:285
+msgid "About:"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:247 template-pricing-plans.php:510
+#: template-edit-profile.php:121 template-edit-post.php:359
+msgid "Account Overview"
+msgstr ""
+
+#. Text in echo
+#: template-profile.php:1016
+msgid "Active"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:908 template-edit-post.php:1070
+msgid "Ad"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:859 template-edit-post.php:987
+msgid "Ad Type"
+msgstr ""
+
+#. Text in echo
+#: functions.php:1548
+msgid "Add Custom Fields to: "
+msgstr ""
+
+#. Text in function
+#: inc/plans.php:1
+msgid "Add New Price Plan"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:831 template-edit-post.php:959
+msgid "Add new image"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:841 template-edit-post.php:969
+msgid "Add video embedding code here (youtube, vimeo, etc)"
+msgstr ""
+
+#. Text in echo
+#: template-single-version2.php:655 single.php:523
+msgid "Added"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:386 template-edit-post.php:505
+msgid "Address"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:278
+msgid "Address:"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:908 template-profile.php:1014
+#: template-edit-post.php:1070
+msgid "Ads"
+msgstr ""
+
+#. Text in echo
+#: index.php:832 template-homepage-v2.php:1039 template-homepage-v1.php:1042
+msgid "Ads from"
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Appears in the footer section of the site."
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Appears on posts and pages in the sidebar."
+msgstr ""
+
+#. Text in echo
+#: archive.php:37
+msgid "Archives"
+msgstr ""
+
+#. Text in echo
+#: single.php:489
+msgid "Author Profile"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:172
+msgid "Avatar:"
+msgstr ""
+
+#. Text in echo
+#: index.php:832 template-homepage-v2.php:1039 template-homepage-v1.php:1042
+msgid "Browse our"
+msgstr ""
+
+#. Text in function
+#: template-pricing-plans.php:655
+msgid "Buy Now!"
+msgstr ""
+
+#. Text in echo
+#: index.php:832 template-homepage-v2.php:1039 template-homepage-v1.php:1042
+msgid "Categories"
+msgstr ""
+
+#. Text in echo
+#: template-single-version2.php:628 single.php:496 template-edit-post.php:398
+msgid "Category"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:284
+msgid "Category *"
+msgstr ""
+
+#. Text in echo
+#: header.php:296 template-pricing-plans.php:423 template-full-width.php:412
+#: author.php:380 index.php:390 template-homepage-v2.php:593 404.php:388
+#: page.php:410 template-tag.php:416 search.php:568 category.php:506
+#: template-left-sidebar.php:412 archive.php:452 template-homepage-v1.php:594
+#: template-profile.php:398
+msgid "Category..."
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:292
+msgid "Change password:"
+msgstr ""
+
+#. Text in echo
+#: index.php:481 template-homepage-v2.php:686 category.php:597 archive.php:592
+#: template-homepage-v1.php:687
+msgid "Check out our Premium Featured Ads"
+msgstr ""
+
+#. Text in echo
+#: template-reset.php:1
+msgid "Check your email for new password."
+msgstr ""
+
+#. Text in echo
+#: comments.php:45
+msgid "Comment navigation"
+msgstr ""
+
+#. Text in echo
+#: comments.php:52
+msgid "Comments are closed."
+msgstr ""
+
+#. Text in echo
+#: author.php:842 template-profile.php:869
+msgid "Contact Details"
+msgstr ""
+
+#. Text in echo
+#: template-single-version2.php:512 single.php:608
+msgid "Contact Owner"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:936 template-edit-post.php:1098
+msgid "Currently you have no active plan. You must purchase a"
+msgstr ""
+
+#. Text in echo
+#: functions.php:1582
+msgid "Custom field title"
+msgstr ""
+
+#. Text in function
+#: archive.php:37
+msgid "Daily Archives: %s"
+msgstr ""
+
+#. Text in echo
+#: template-profile.php:1019
+msgid "Date"
+msgstr ""
+
+#. Text in echo
+#: template-profile.php:1212
+msgid "Delete"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:567 template-add-post.php:765
+#: template-edit-profile.php:202 template-edit-post.php:701
+#: template-edit-post.php:893
+msgid "Delete Image"
+msgstr ""
+
+#. Text in echo
+#: author.php:856 template-profile.php:883 template-edit-post.php:480
+msgid "Description"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:361
+msgid "Description *"
+msgstr ""
+
+#. Text in echo
+#: template-pricing-plans.php:152 template-full-width.php:152 author.php:120
+#: author.php:781 index.php:130 index.php:789 template-homepage-v2.php:333
+#: template-homepage-v2.php:996 404.php:117 template-single-version2.php:271
+#: page.php:150 single.php:322 template-tag.php:145 search.php:302
+#: search.php:192 search.php:285 search.php:1605 search.php:1692
+#: category.php:245 category.php:911 template-left-sidebar.php:152
+#: archive.php:192 archive.php:887 template-homepage-v1.php:334
+#: template-homepage-v1.php:999 template-profile.php:138
+#: template-profile.php:799
+msgid "Details"
+msgstr ""
+
+#. Text in echo
+#: template-register.php:187 template-reset.php:110
+#: template-edit-profile.php:165
+msgid "E-mail:"
+msgstr ""
+
+#. Text in echo
+#: template-profile.php:1206
+msgid "Edit"
+msgstr ""
+
+#. Text in function
+#: inc/plans.php:1
+msgid "Edit Price Plan"
+msgstr ""
+
+#. Text in echo
+#: template-reset.php:64
+msgid "Email should not be empty."
+msgstr ""
+
+#. Text in echo
+#: template-contact.php:231
+msgid "Email*"
+msgstr ""
+
+#. Text in echo
+#: header.php:252 template-pricing-plans.php:379 template-full-width.php:368
+#: author.php:336 index.php:346 template-homepage-v2.php:549 404.php:344
+#: page.php:366 template-tag.php:372 search.php:524 category.php:462
+#: template-left-sidebar.php:368 archive.php:408 template-homepage-v1.php:550
+#: template-profile.php:354
+msgid "Enter keyword..."
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:934 template-edit-post.php:1096
+msgid "Featured"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:1030 template-pricing-plans.php:740
+#: template-edit-profile.php:399 template-profile.php:962
+#: template-edit-post.php:1194
+msgid "Featured Ads left"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:546 template-edit-post.php:680
+msgid "Featured Image"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:936 template-edit-post.php:1098
+msgid "Featured Pricing Plan"
+msgstr ""
+
+#. Text in echo
+#: template-edit-post.php:1014
+msgid "Featured. Expires:"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:151
+msgid "First name:"
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Footer Widget Area Four"
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Footer Widget Area One"
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Footer Widget Area Three"
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Footer Widget Area Two"
+msgstr ""
+
+#. Text in function
+#: template-login.php:108
+msgid "Forgot Password"
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Forum Widget Area"
+msgstr ""
+
+#. Text in echo
+#: forum.php:20
+msgid "Forums"
+msgstr ""
+
+#. Text in echo
+#: template-contact.php:95
+msgid "From website"
+msgstr ""
+
+#. Text in echo
+#: template-reset.php:48
+msgid "From:"
+msgstr ""
+
+#. Text in echo
+#: template-single-version2.php:612 single.php:664 template-contact.php:239
+msgid "Human test. Please input the result of 5+3=?"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:302
+msgid ""
+"If you would like to change the password type a new one. Otherwise leave "
+"this blank."
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:634 template-edit-post.php:768
+msgid "Images"
+msgstr ""
+
+#. Text in echo
+#: template-login.php:1
+msgid "Invalid username or password. Please try again!"
+msgstr ""
+
+#. Text in echo
+#: 404.php:480
+msgid "It looks like nothing was found at this location."
+msgstr ""
+
+#. Text in echo
+#: content-none.php:26
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:158
+msgid "Last name:"
+msgstr ""
+
+#. Text in echo
+#: index.php:966 template-homepage-v2.php:1173 category.php:942
+#: archive.php:918 template-homepage-v1.php:1176
+msgid "Latest Ads"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:520 template-edit-post.php:639
+msgid "Latitude"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:350 template-edit-post.php:469
+msgid "Leave empty for free listing"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:356 template-single-version2.php:664 single.php:532
+#: template-edit-post.php:475
+msgid "Location"
+msgstr ""
+
+#. Text in echo
+#: header.php:263 template-pricing-plans.php:390 template-full-width.php:379
+#: author.php:347 index.php:357 template-homepage-v2.php:560 404.php:355
+#: page.php:377 template-tag.php:383 search.php:535 category.php:473
+#: template-left-sidebar.php:379 archive.php:419 template-homepage-v1.php:561
+#: template-profile.php:365
+msgid "Location..."
+msgstr ""
+
+#. Text in function
+#: header.php:83 header.php:362
+msgid "Log out"
+msgstr ""
+
+#. Text in function
+#: header.php:92 header.php:371 template-login.php:120
+msgid "Login"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:527 template-edit-post.php:646
+msgid "Longitude"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:1048 template-single-version2.php:688 single.php:766
+#: template-tag.php:677 template-edit-post.php:1212
+msgid "Most Popular"
+msgstr ""
+
+#. Text in echo
+#: index.php:969 template-homepage-v2.php:1176 category.php:945
+#: archive.php:921 template-homepage-v1.php:1179
+msgid "Most Popular Ads"
+msgstr ""
+
+#. Text in function
+#: header.php:80 header.php:359
+msgid "My Account"
+msgstr ""
+
+#. Text in echo
+#: template-profile.php:994
+msgid "My Featured Ad Plans"
+msgstr ""
+
+#. Text in echo
+#: template-pricing-plans.php:756
+msgid "My Featured Ads"
+msgstr ""
+
+#. Text in echo
+#: template-contact.php:94 template-profile.php:1013
+msgid "Name"
+msgstr ""
+
+#. Text in echo
+#: template-contact.php:1 template-contact.php:229
+msgid "Name*"
+msgstr ""
+
+#. Text in function
+#: functions.php:1
+msgid "Navigation Menu"
+msgstr ""
+
+#. Text in echo
+#: template-edit-post.php:1014
+msgid "Never"
+msgstr ""
+
+#. Text in echo
+#: template-reset.php:50
+msgid "New Password:"
+msgstr ""
+
+#. Text in function
+#: inc/plans.php:1
+msgid "New Price Plan"
+msgstr ""
+
+#. Text in function
+#: comments.php:47
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#. Text in function
+#: functions.php:1162
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#. Text in function
+#: pagination.php:1
+msgid "Next »"
+msgstr ""
+
+#. Text in function
+#: inc/plans.php:1
+msgid "No Price Plan found"
+msgstr ""
+
+#. Text in function
+#: inc/plans.php:1
+msgid "No Price Plans found in Trash"
+msgstr ""
+
+#. Text in echo
+#: search.php:1714 search.php:2279
+msgid "No results found for the selected search criteria."
+msgstr ""
+
+#. Text in echo
+#: template-pricing-plans.php:659
+msgid "No worries, it is 100% Secure!"
+msgstr ""
+
+#. Text in echo
+#: template-contact.php:83
+msgid "Not Human :("
+msgstr ""
+
+#. Text in echo
+#: 404.php:469
+msgid "Not found"
+msgstr ""
+
+#. Text in echo
+#: content-none.php:12
+msgid "Nothing Found"
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Page %s"
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Pages Widget Area"
+msgstr ""
+
+#. Text in echo
+#: template-register.php:80
+msgid "Password Mismatch"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:91
+msgid "Password Mismatch."
+msgstr ""
+
+#. Text in echo
+#: template-register.php:70 template-edit-profile.php:83
+msgid "Password must be 5 to 15 characters in length."
+msgstr ""
+
+#. Text in echo
+#: template-reset.php:49
+msgid "Password reset!"
+msgstr ""
+
+#. Text in echo
+#: template-register.php:104 template-register.php:194 template-login.php:91
+msgid "Password:"
+msgstr ""
+
+#. Text in function
+#: functions.php:1198
+msgid "Permalink to %s"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:271
+msgid "Phone:"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:75
+msgid "Please enter a valid email id."
+msgstr ""
+
+#. Text in echo
+#: template-register.php:60
+msgid "Please enter a valid email."
+msgstr ""
+
+#. Text in echo
+#: functions.php:1190
+msgid "Post navigation"
+msgstr ""
+
+#. Text in echo
+#: header.php:385
+msgid "Post your Ad!"
+msgstr ""
+
+#. Text in echo
+#: functions.php:1154
+msgid "Posts navigation"
+msgstr ""
+
+#. Text in echo
+#: author.php:471 search.php:669 template-profile.php:489
+msgid "Premium Featured Ads"
+msgstr ""
+
+#. Text in echo
+#: author.php:908 template-profile.php:1056
+msgid "Premium Regular Ads"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:348 template-profile.php:1017
+#: template-edit-post.php:467
+msgid "Price"
+msgstr ""
+
+#. Text in echo
+#: template-profile.php:891
+msgid "Profile Information"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:950
+msgid "Publish Ad"
+msgstr ""
+
+#. Text in echo
+#: index.php:972 template-homepage-v2.php:1179 category.php:948
+#: archive.php:924 template-homepage-v1.php:1182
+msgid "Random Ads"
+msgstr ""
+
+#. Text in echo
+#: template-single-version2.php:678 single.php:545
+msgid "Rating"
+msgstr ""
+
+#. Text in function
+#: content-none.php:18
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#. Text in echo
+#: template-homepage-v2.php:1628
+msgid "Recent Products"
+msgstr ""
+
+#. Text in function
+#: header.php:95 header.php:374
+msgid "Register"
+msgstr ""
+
+#. Text in echo
+#: template-reset.php:206 template-login.php:207
+msgid "Register an account"
+msgstr ""
+
+#. Text in echo
+#: template-register.php:305
+msgid "Registration is currently disabled. Please try again later."
+msgstr ""
+
+#. Text in echo
+#: template-register.php:103 template-register.php:104
+msgid "Registration successful"
+msgstr ""
+
+#. Text in echo
+#: template-register.php:1 template-register.php:88
+msgid "Registration successful."
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:921
+msgid "Regular"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:961 template-pricing-plans.php:681
+#: template-edit-profile.php:330 search.php:1730 template-profile.php:893
+#: template-edit-post.php:1125
+msgid "Regular Ads"
+msgstr ""
+
+#. Text in echo
+#: template-single-version2.php:424 single.php:682
+msgid "Related Ads"
+msgstr ""
+
+#. Text in echo
+#: template-login.php:99
+msgid "Remember me"
+msgstr ""
+
+#. Text in echo
+#: template-reset.php:50
+msgid "Reset password."
+msgstr ""
+
+#. Text in echo
+#: template-register.php:201 template-edit-profile.php:299
+msgid "Retype password:"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:311
+msgid "Save"
+msgstr ""
+
+#. Text in function
+#: header.php:338 template-pricing-plans.php:485 template-full-width.php:474
+#: author.php:442 index.php:452 template-homepage-v2.php:655 404.php:450
+#: page.php:472 template-tag.php:478 search.php:630 category.php:568
+#: template-left-sidebar.php:474 archive.php:514 template-homepage-v1.php:656
+#: template-profile.php:460
+msgid "Search"
+msgstr ""
+
+#. Text in function
+#: inc/plans.php:1
+msgid "Search Price Plans"
+msgstr ""
+
+#. Text in function
+#: search.php:649
+msgid "Search Results for: "
+msgstr ""
+
+#. Text in echo
+#: template-pricing-plans.php:337 template-full-width.php:326 author.php:294
+#: index.php:304 template-homepage-v2.php:507 404.php:302 page.php:324
+#: template-tag.php:330 search.php:482 category.php:420
+#: template-left-sidebar.php:326 archive.php:366 template-homepage-v1.php:508
+#: template-profile.php:312
+msgid "Search around my position"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:1041 template-pricing-plans.php:751
+#: template-edit-profile.php:410 template-profile.php:973
+#: template-edit-post.php:1205
+msgid "See Featured Ads Plans"
+msgstr ""
+
+#. Text in echo
+#: functions.php:1485
+msgid "Select category:"
+msgstr ""
+
+#. Text in echo
+#: template-contact.php:247
+msgid "Send Message"
+msgstr ""
+
+#. Text in function
+#: template-profile.php:835
+msgid "Settings"
+msgstr ""
+
+#. Text in function
+#: functions.php:858
+msgid "Shop Widget Area"
+msgstr ""
+
+#. Text in echo
+#: template-register.php:223 template-reset.php:132 template-login.php:133
+msgid "Social account login"
+msgstr ""
+
+#. Text in echo
+#: content-none.php:22
+msgid "Sorry, but nothing matched your search terms."
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:392 template-edit-post.php:511
+msgid "Start typing an address and select from the dropdown."
+msgstr ""
+
+#. Text in echo
+#: template-profile.php:1018
+msgid "Status"
+msgstr ""
+
+#. Text in function
+#: functions.php:1198
+msgid "Sticky"
+msgstr ""
+
+#. Text in echo
+#: category.php:1269
+msgid "Subcategories"
+msgstr ""
+
+#. Text in echo
+#: template-contact.php:51 template-contact.php:233
+msgid "Subject*"
+msgstr ""
+
+#. Text in echo
+#: template-register.php:210 template-reset.php:119
+msgid "Submit"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:536 template-edit-post.php:655
+msgid "Tags"
+msgstr ""
+
+#. Text in echo
+#: template-reset.php:59
+msgid "There is no user available for this email."
+msgstr ""
+
+#. Text in echo
+#: 404.php:479
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#. Text in echo
+#: template-edit-post.php:390
+msgid "Title"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:276
+msgid "Title *"
+msgstr ""
+
+#. Text in echo
+#: template-edit-post.php:1114
+msgid "Update Ad"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:566 template-add-post.php:764
+#: template-edit-profile.php:201 template-edit-post.php:700
+#: template-edit-post.php:892
+msgid "Upload New Image"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:538 template-edit-post.php:672
+msgid "Use comma for multiple tags (ex: girl, boy, etc)."
+msgstr ""
+
+#. Text in echo
+#: template-profile.php:1015
+msgid "Used"
+msgstr ""
+
+#. Text in echo
+#: template-register.php:46
+msgid "User name should not be empty."
+msgstr ""
+
+#. Text in echo
+#: template-register.php:99
+msgid "Username or E-mail already exists. Please try another one."
+msgstr ""
+
+#. Text in echo
+#: template-register.php:104 template-register.php:180 template-login.php:84
+msgid "Username:"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:839 template-single-version2.php:169 single.php:220
+#: template-edit-post.php:967
+msgid "Video"
+msgstr ""
+
+#. Text in function
+#: inc/plans.php:1
+msgid "View Price Plan"
+msgstr ""
+
+#. Text in function
+#: functions.php:1198
+msgid "View all posts by %s"
+msgstr ""
+
+#. Text in function
+#: template-single-version2.php:629 single.php:497
+msgid "View all posts in %s"
+msgstr ""
+
+#. Text in echo
+#: template-single-version2.php:670 single.php:538
+msgid "Views"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:264
+msgid "Website:"
+msgstr ""
+
+#. Text in echo
+#: template-register.php:104 template-reset.php:50
+msgid "Your login details"
+msgstr ""
+
+#. Text in echo
+#: template-edit-profile.php:1 template-edit-profile.php:97
+msgid "Your profile updated successfully."
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:908 template-edit-post.php:1070
+msgid "active for"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:908 template-edit-post.php:1070
+msgid "available"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:908 template-edit-post.php:1070
+msgid "days"
+msgstr ""
+
+#. Text in echo
+#: template-add-post.php:936 template-edit-post.php:1098
+msgid "to be able to publish a Featured Ad."
+msgstr ""
+
+#. Text in function
+#: pagination.php:1
+msgid "« Previous"
+msgstr ""
