@@ -1,0 +1,251 @@
+/*------------------------------------*\
+	Theme Name: The College Dump
+	Date: October 2014 
+	Description: Customization of FlatAds theme for The College Dump. 
+	Version: 1.6.3
+	Author: Alex Gurghis, Jordan Pakrosnis
+	Author URI: http://alexgurghis.com
+	Template: flatads
+	License URI: http://themeforest.net/licenses/regular_extended
+	License: Commercial
+	Theme URI: 
+	Tags: classified, ads, premium, theme, wordpress, responsive, flat, clean, bbpress, woocommerce, e-shop, ecommerce, directory
+/*------------------------------------*/
+
+@import url("../flatads/style.css");
+
+
+
+/* =Theme customization starts here
+------------------------------------------------------- */
+
+
+/* Menu */
+#top-menu-block {
+	background-color: #eef6ff !important;
+	z-index: 9999 !important;
+	position: relative !important;
+}
+
+header#navbar {
+	background: none !important; /* #fff url(../images/header-bg.png) repeat-x bottom left; */
+	border-bottom: 5px solid #8ecb4d !important; /* TCD */
+	z-index: 999 !important;
+	position: relative !important;
+}
+
+header#navbar .container {
+	background: none !important;
+}
+
+/* Header */
+a.logo {
+	margin: 22px 15px 13px 0 !important;  /* 18px 15px 17px 0; */
+	float: left !important;
+}
+
+.main_menu {
+	padding-top:36px !important;
+	float: right !important;
+}
+
+section.tcd-quote {
+	/* background: url(http://localhost/the-college-dump/wp-content/themes/the-college-dump/images/header-bg.png) repeat-x bottom left; /* TCD */
+	background-color: #063e8b;
+	box-shadow: inset 0px -5px 0px 1px #002d74;
+	border-top: 1px solid #002d74;
+}
+
+div.tcd-quote-inner {
+	/* background: url(http://localhost/the-college-dump/wp-content/themes/the-college-dump/images/header-color-bg.png) repeat-x bottom left; */
+	padding-top:10px; 
+	padding-bottom:10px;
+}
+
+h1.tcd-quote {
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: #fff;
+	/*text-shadow: 1px 1px 0px #06448d, 2px 2px 0px #2362ac; */
+}
+
+h1.tcd-quote i {
+	font-family:Oswald;
+	font-weight:400;
+	font-style: normal;
+	font-size:40px;
+	line-height:40px;
+	color: #8ecb4d;
+}
+
+.tcd-bigmap {
+	padding-bottom: 5px; 
+	background: url(http://thecollegedump.com/wp-content/themes/flatads-tcd/images/header-bg.png) repeat-x bottom left;
+}
+
+.advanced-search-widget-content {
+	border-color: #063e8b;
+}
+
+#advanced-search-widget-version2 .views-exposed-widget .btn-primary {
+	background-color: #063e8b;
+}
+	
+#advanced-search-widget-version2 .views-exposed-widget .btn-primary:hover {
+	background-color: #8eca4d !important;
+}
+
+#ads-homepage, #ads-category-content {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#categories-homepage h3 {
+	display: none;
+}
+
+#categories-homepage {
+	background: none !important;
+	margin-top: 24px;
+}
+
+.category-box {
+	box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	border: 1px solid #c9e0fa !important;
+	background-color: #eef6ff !important;
+	margin-bottom: 10px !important;
+	float: left !important;
+	height: 245px !important;
+	-webkit-border-radius: 2px !important;
+	-moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+	-webkit-box-shadow: 0px 1px 6px 0px rgba(28, 128, 239, 0.25) !important;
+	-moz-box-shadow: 0px 1px 6px 0px rgba(28, 128, 239, 0.25) !important;
+	box-shadow: 0px 1px 6px 0px rgba(28, 128, 239, 0.25) !important;
+}
+
+.category-header {
+	border-bottom: 1px solid #c9e0fa !important;
+}
+
+#ads-homepage ul.tabs li a {
+	padding: 15px 25px !important;
+	border-right: solid 1px #ecf0f1 !important;
+	font-family: Oswald !important;
+	font-size: 18px !important;
+}
+
+
+#ads-category-content ul.tabs li a {
+	padding: 15px 25px !important;
+	border-right: solid 1px #ecf0f1 !important;
+	font-family: Oswald !important;
+	font-size: 18px !important;
+}
+
+
+ul.tabs li a:hover, #ads-category-content ul.tabs li a.current {
+	text-decoration: none !important;
+	background-color: #eef6ff !important;
+	color: #044386 !important;
+	font-family: Oswald !important;	
+}
+
+
+#ads-homepage ul.tabs li a:hover, #ads-homepage ul.tabs li a.current {
+	text-decoration: none !important;
+	background-color: #eef6ff !important;
+	color: #044386 !important;
+	font-family: Oswald !important;
+}
+
+
+#category-featured-ads-title .container {
+	padding: 15px 0 !important;
+	padding-bottom: 2px !important;
+}
+
+#ad-page-title {
+	background-color: #063e8b !important;
+	box-shadow: inset 0px -5px 0px 1px #002d74;
+	border-top: 1px solid #002d74;
+}
+
+#ad-page-title h2 {
+	color: #fff;
+}
+
+#ad-page-title h2 a {
+	color: #fff !important;
+}
+
+#ad-page-title .ad-page-price h2 { 
+	color: #fff !important;
+}
+
+#category-featured-ads-title {
+	background-color: #063e8b !important;
+	box-shadow: inset 0px -5px 0px 1px #002d74;
+	border-top: 1px solid #002d74;	
+}
+
+#category-featured-ads-title .container h2 {
+	color: #fff !important;
+}
+
+
+
+/* Footer */
+footer {
+	background: #eef6ff url(images/header-bg.png) repeat-x top left !important; /* ecf0f1 */
+	border-bottom: 5px solid #8ecb4d !important;
+}
+
+footer .container {
+	background: none !important;
+}
+
+.socket {
+	background-color: #fff !important;
+}
+
+.block-title {
+	margin: 0 !important;
+	margin-bottom: 20px !important;
+	font-weight: 500 !important;
+	color: #003883 !important;
+}
+
+.backtop a {
+	background-color: #073f8c !important;
+}
+
+.add-new-post-header .container {
+	border-bottom: none !important;
+}
+
+.add-new-post-header {
+	padding-bottom: 10px !important;
+}
+
+#ad-page-title h1, #ad-page-title h2, #ad-page-title h3, #ad-page-title h4, #ad-page-title h5 {
+	color: #fff !important;
+}
+
+section.ads-main-page {
+	margin-top: 40px;
+}
+
+
+#ad-comments, #comments, #respond {
+	display: none !important;
+}
+
+
+/* ALREADY HERE */
+.site-info {
+	width: 100%;
+	margin-bottom: 10px;
+	text-align: center;
+}

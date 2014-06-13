@@ -6474,6 +6474,15 @@ ul, ol {
 	background-color: #fff !important;
 }
 
+/* TCD_CUSTOM : TITLE */
+#ad-page-title {
+	background-color: #063e8b !important;
+}
+
+/* TCD_CUSTOM : TITLE */
+#category-featured-ads-title {
+	background-color: #063e8b !important;
+}
 
 /* Boxed */
 #boxed #top-menu-block, #boxed header#navbar, #boxed #big-map, #boxed #featured-list, #boxed #categories-homepage, #boxed #ads-homepage, #boxed footer, #boxed .socket, #boxed #ad-page-title, #boxed #ad-page-header, #boxed .ads-main-page, #boxed #category-featured-ads-title, #boxed #featured-ads-category, #boxed #ads-category-content, #boxed #container, #boxed #seacrh-result-title, #boxed #featured-ads-author, #boxed #ads-profile, #boxed #layerslider {
