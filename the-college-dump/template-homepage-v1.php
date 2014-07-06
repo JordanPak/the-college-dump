@@ -1111,7 +1111,7 @@ get_header(); ?>
 
 		    			<span class="cat-title"><a href="<?php echo get_category_link( $catName ) ?>"><h4><?php echo get_cat_name( $catName ); ?></h4></a></span>
 
-		    			<span class="category-total"><h4><?php echo $allPosts; ?></h4></span>
+		    			<span class="category-total"><h4><?php // TCD_CUSTOM echo $allPosts; ?></h4></span>
 
             		</div>
 
@@ -1165,7 +1165,7 @@ get_header(); ?>
 								  	<a href="<?php echo get_category_link( $category->term_id )?>" title="View posts in <?php echo $category->name?>">
 										<?php $categoryTitle = $category->name; $categoryTitle = (strlen($categoryTitle) > 30) ? substr($categoryTitle,0,27).'...' : $categoryTitle; echo $categoryTitle; ?>
 									</a>
-								  	<span class="category-counter"><?php echo $category->count ?></span>
+								  	<span class="category-counter"><?php // TCD_CUSTOM echo $category->count ?></span>
 								</li>
 
 							<?php } ?> 

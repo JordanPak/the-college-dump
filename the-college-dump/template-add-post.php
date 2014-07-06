@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Edit Ad
+ * Template name: New Ad Page
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -14,102 +14,21 @@ $listing_state = $redux_demo['listing-state'];
 $profile = $redux_demo['profile'];
 
 if ( !is_user_logged_in() ) {
-								
-	wp_redirect( home_url() ); exit;
+
+	global $redux_demo; 
+	$login = $redux_demo['login'];
+	wp_redirect( $login ); exit;
 								
 } else { 
 
 }
-
-$postContent = '';
-
-$query = new WP_Query(array('post_type' => 'post', 'posts_per_page' =>'-1', 'post_status' => 'publish, draft, pending') );
-
-if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-	
-	if(isset($_GET['post'])) {
-		
-		if($_GET['post'] == $post->ID)
-		{
-			$current_post = $post->ID;
-
-			$title = get_the_title();
-			$content = get_the_content();
-
-			$posttags = get_the_tags($current_post);
-			if ($posttags) {
-			  foreach($posttags as $tag) {
-				$tags_list = $tag->name . ' '; 
-			  }
-			}
-
-			$postcategory = get_the_category( $current_post );
-			$category_id = $postcategory[0]->cat_ID;
-
-			$post_category_type = get_post_meta($post->ID, 'post_category_type', true);
-			$post_price = get_post_meta($post->ID, 'post_price', true);
-			$post_location = get_post_meta($post->ID, 'post_location', true);
-			$post_latitude = get_post_meta($post->ID, 'post_latitude', true);
-			$post_longitude = get_post_meta($post->ID, 'post_longitude', true);
-			$post_price_plan_id = get_post_meta($post->ID, 'post_price_plan_id', true);
-			$post_address = get_post_meta($post->ID, 'post_address', true);
-			$post_video = get_post_meta($post->ID, 'post_video', true);
-
-			$featured_post = "0";
-
-			$post_price_plan_activation_date = get_post_meta($post->ID, 'post_price_plan_activation_date', true);
-			$post_price_plan_expiration_date = get_post_meta($post->ID, 'post_price_plan_expiration_date', true);
-			$todayDate = strtotime(date('d/m/Y H:i:s'));
-			$expireDate = strtotime($post_price_plan_expiration_date);  
-
-			if(!empty($post_price_plan_activation_date)) {
-
-				if(($todayDate < $expireDate) or empty($post_price_plan_expiration_date)) {
-					$featured_post = "1";
-				}
-
-			}
-
-
-
-			if(empty($post_latitude)) {
-				$post_latitude = 0;
-			}
-
-			if(empty($post_longitude)) {
-				$post_longitude = 0;
-				$mapZoom = 2;
-			} else {
-				$mapZoom = 16;
-			}
-			
-			$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large');
-
-			$large_image_id = get_post_thumbnail_id( $post_id );
-
-			
-			if ( has_post_thumbnail() ) {
-			
-				$post_thumbnail = get_the_post_thumbnail($current_post, 'thumbnail');
-			
-			} 
-			
-		}
-	}
-
-endwhile; endif;
-wp_reset_query();
-
-global $current_post;
-
-global $redux_demo; 
-$listing_state = $redux_demo['listing-state'];
 
 
 $postTitleError = '';
 $post_priceError = '';
 $catError = '';
 $featPlanMesage = '';
+$postContent = '';
 
 if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_nonce($_POST['post_nonce_field'], 'post_nonce')) {
 
@@ -118,7 +37,7 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		$hasError = true;
 	} else {
 		$postTitle = trim($_POST['postTitle']);
-	}
+	} 
 
 	if(trim($_POST['cat']) === '-1') {
 		$catError = 'Please select a category.';
@@ -128,11 +47,10 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 
 
 	if($hasError != true) {
-	
+
 		if (is_admin()) {
 	
 			$post_information = array(
-				'ID' => $current_post,
 				'post_title' => esc_attr(strip_tags($_POST['postTitle'])),
 				'post_content' => esc_attr(strip_tags($_POST['postContent'])),
 				'post-type' => 'post',
@@ -148,7 +66,6 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 			if($listing_state == "1") {
 
 				$post_information = array(
-					'ID' => $current_post,
 					'post_title' => esc_attr(strip_tags($_POST['postTitle'])),
 					'post_content' => esc_attr(strip_tags($_POST['postContent'])),
 					'post-type' => 'post',
@@ -162,7 +79,6 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 			} else {
 
 				$post_information = array(
-					'ID' => $current_post,
 					'post_title' => esc_attr(strip_tags($_POST['postTitle'])),
 					'post_content' => esc_attr(strip_tags($_POST['postContent'])),
 					'post-type' => 'post',
@@ -177,14 +93,7 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 
 		}
 		
-		
 		$post_id = wp_insert_post($post_information);
-
-		$latitude = wp_kses($_POST['latitude'], $allowed);
-		$longitude = wp_kses($_POST['longitude'], $allowed);
-
-		if($latitude == 0) { $latitude = ""; };
-		if($longitude == 0) { $longitude = ""; };
 
 		$post_price_status = trim($_POST['post_price']);
 
@@ -201,8 +110,8 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		update_post_meta($post_id, 'custom_field', $_POST['custom_field']);
 		update_post_meta($post_id, 'post_price', $post_price_content, $allowed);
 		update_post_meta($post_id, 'post_location', wp_kses($_POST['post_location'], $allowed));
-		update_post_meta($post_id, 'post_latitude', $latitude);
-		update_post_meta($post_id, 'post_longitude', $longitude);
+		update_post_meta($post_id, 'post_latitude', wp_kses($_POST['latitude'], $allowed));
+		update_post_meta($post_id, 'post_longitude', wp_kses($_POST['longitude'], $allowed));
 		update_post_meta($post_id, 'post_address', wp_kses($_POST['address'], $allowed));
 		update_post_meta($post_id, 'post_video', $_POST['video'], $allowed);
 
@@ -281,34 +190,6 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		}
 
 
-
-		$attachments = get_children(array('post_parent' => $post_id,
-			'post_status' => 'inherit',
-			'post_type' => 'attachment',
-			'post_mime_type' => 'image',
-			'order' => 'ASC',
-			'orderby' => 'menu_order ID'));
-
-		foreach($attachments as $att_id => $attachment) {
-
-				$full_img_id = $attachment->ID;
-
-				$my_post = array(
-			      	'ID' => $full_img_id,
-			      	'post_parent' => ''
-			  	);
-
-			  	wp_update_post( $my_post );		
-
-		}
-
-
-		delete_post_thumbnail( $post_id );
-
-
-
-
-
 		$featured_image_url = $_POST['featured-image-url'];
 
 		if(!empty($featured_image_url)) {
@@ -329,13 +210,13 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 
 		$listing_image_url = $_POST['listing_image_url'];
 
-		$listing_total_images = $_POST['listing_total_images'];
+		$listing_total_ = $_POST['listing_total_'];
 
-		if(empty($listing_total_images)) {
-			$listing_total_images = count($listing_image_url);
+		if(empty($listing_total_)) {
+			$listing_total_ = count($listing_image_url);
 		}
 
-		for ($i = 0; $i <= $listing_total_images; $i++) {
+		for ($i = 0; $i <= $listing_total_; $i++) {
 
 			if(!empty($listing_image_url[$i][0])) {
 
@@ -353,7 +234,7 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 
 		if(empty($featured_image_url)) {
 
-			$image_url = get_template_directory()."/images/no-image.png";
+			$image_url = get_template_directory()."//no-image.png";
 
 			$upload_dir = wp_upload_dir();
 			$image_data = file_get_contents($image_url);
@@ -379,7 +260,8 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 			set_post_thumbnail( $post_id, $attach_id );
 
 		}
-		
+
+
 		if (is_admin()) {
 	
 			wp_redirect( $permalink ); exit;
@@ -397,6 +279,7 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 			}
 
 		}
+
 
 	}
 
@@ -444,19 +327,17 @@ get_header(); ?>
 
 						<fieldset class="input-title">
 
-							<h2><?php echo $expireDate; ?></h2>
-
-							<label for="edit-title" class="control-label"><?php _e('Title', 'agrg') ?></label>
-							<input type="text" id="postTitle" name="postTitle" value="<?php echo $title; ?>" size="60" maxlength="255" class="form-text required">
+							<label for="edit-title" class="control-label"><?php _e('Title *', 'agrg') ?></label>
+							<input type="text" id="postTitle" name="postTitle" value="" size="60" maxlength="255" class="form-text required">
 
 						</fieldset>
 							
 
 						<div id="edit-field-category">
 							<div class="form-item">
-								<label for="edit-field-category-und" class="control-label"><?php _e('Category', 'agrg') ?></label>
+								<label for="edit-field-category-und" class="control-label"><?php _e('Category *', 'agrg') ?></label>
 
-								<?php wp_dropdown_categories( 'show_option_none=Category&hide_empty=0&hierarchical=1&selected='. $category_id .'&taxonomy=category&id=catID' ); $currCatID = $category_id; ?>
+								<?php wp_dropdown_categories( 'show_option_none=Category&hide_empty=0&hierarchical=1&id=catID' ); ?>
 
 							</div>
 						</div>
@@ -475,8 +356,6 @@ get_header(); ?>
 
 							  	$inum++;
 
-							  	global $user_id;
-
 				          		$user_name = $category->name;
 				          		$user_id = $category->term_id; 
 
@@ -493,29 +372,26 @@ get_header(); ?>
 								}
 				          	?>
 
-				          	<div id="cat-<?php echo $user_id; ?>" class="wrap-content" <?php if($currCatID == $user_id) { ?>style="display: block;"<?php  } else { ?>style="display: none;"<?php } ?>>
+				          	<div id="cat-<?php echo $user_id; ?>" class="wrap-content" style="display: none;">
 
 				             	<?php 
-
-				             		$wpcrown_custom_fields = get_post_meta($current_post, 'custom_field', true);
-
 				                	for ($i = 0; $i < (count($wpcrown_category_custom_field_option)); $i++) {
-
 				              	?>
 
 				                <fieldset class="input-title">
 
 									<label for="edit-title" class="control-label"><?php if (!empty($wpcrown_category_custom_field_option[$i][0])) echo $wpcrown_category_custom_field_option[$i][0]; ?></label>
 
-									<input type="hidden" class="custom_field" id="custom_field[<?php echo $i; ?>][0]" name="custom_field[<?php echo $i; ?>][0]" value="<?php if (!empty($wpcrown_category_custom_field_option[$i][0])) echo $wpcrown_category_custom_field_option[$i][0]; ?>" size="12">
+									<input type="hidden" class="custom_field" id="custom_field[<?php echo $i; ?>][0]" name="custom_field[<?php echo $i; ?>][0]" value="<?php if (!empty($wpcrown_category_custom_field_option[$i][0])) echo $wpcrown_category_custom_field_option[$i][0]; ?>" >
 
-									<input type="text" class="custom_field" id="custom_field[<?php echo $i; ?>][1]" name="custom_field[<?php echo $i; ?>][1]" value="<?php if($currCatID == $user_id) { echo $wpcrown_custom_fields[$i][1]; } ?>" size="12">
+									<input type="text" class="custom_field" id="custom_field[<?php echo $i; ?>][1]" name="custom_field[<?php echo $i; ?>][1]" value="" >
 
 								</fieldset>
 				              
 				              	<?php 
 				                	}
 				              	?>
+
 
 				            </div>
 
@@ -524,7 +400,7 @@ get_header(); ?>
 						<div id="price-field">
 
 							<label for="edit-field-category-und" class="control-label"><?php _e('Price', 'agrg') ?></label>
-							<input type="text" id="post_price" name="post_price" value="<?php echo $post_price; ?>" size="12" maxlength="10" class="form-text required">
+							<input type="text" id="post_price" name="post_price" value="" size="12" class="form-text required">
 							<p class="help-block"><?php _e('Leave empty for free listing', 'agrg') ?></p>
 
 						</div>
@@ -532,11 +408,11 @@ get_header(); ?>
 						<fieldset class="input-title">
 
 							<label for="edit-title" class="control-label"><?php _e('Location', 'agrg') ?></label>
-							<input type="text" id="post_location" name="post_location" value="<?php echo $post_location; ?>" size="12" maxlength="110" class="form-text required">
+							<input type="text" id="post_location" name="post_location" value="" size="12" maxlength="110" class="form-text required">
 
 						</fieldset>
 
-						<label for="edit-title" class="control-label"><?php _e('Description', 'agrg') ?></label>
+						<label for="edit-title" class="control-label"><?php _e('Description *', 'agrg') ?></label>
 
 						<?php 
 								
@@ -555,7 +431,7 @@ get_header(); ?>
 								)
 							);
 									
-							wp_editor( $content, 'postContent', $settings );
+							wp_editor( $postContent, 'postContent', $settings );
 
 						?>
 
@@ -565,7 +441,7 @@ get_header(); ?>
 
 						<div id="map-container">
 
-							<input id="address" name="address" type="textbox" value="<?php echo $post_address; ?>">
+							<input id="address" name="address" type="textbox" value="">
 
 							<p class="help-block"><?php _e('Start typing an address and select from the dropdown.', 'agrg') ?></p>
 
@@ -604,9 +480,9 @@ get_header(); ?>
 
 									function initialize() {
 
-									  var latlng = new google.maps.LatLng(<?php echo $post_latitude; ?>, <?php echo $post_longitude; ?>);
+									  var latlng = new google.maps.LatLng(0, 0);
 									  var mapOptions = {
-									    zoom: <?php echo $mapZoom; ?>,
+									    zoom: 2,
 									    center: latlng
 									  }
 
@@ -696,14 +572,14 @@ get_header(); ?>
 						<div id="latitude-field">
 
 							<label for="edit-field-category-und" class="control-label"><?php _e('Latitude', 'agrg') ?></label>
-							<input type="text" id="latitude" name="latitude" value="<?php echo $post_latitude; ?>" size="12" maxlength="10" class="form-text required">
+							<input type="text" id="latitude" name="latitude" value="" size="12" maxlength="10" class="form-text required">
 
 						</div>
 
 						<div id="longitude-field">
 
 							<label for="edit-field-category-und" class="control-label"><?php _e('Longitude', 'agrg') ?></label>
-							<input type="text" id="longitude" name="longitude" value="<?php echo $post_longitude; ?>" size="12" maxlength="10" class="form-text required">
+							<input type="text" id="longitude" name="longitude" value="" size="12" maxlength="10" class="form-text required">
 
 						</div>
 
@@ -712,23 +588,8 @@ get_header(); ?>
 						<fieldset class="input-title">
 
 							<label for="edit-field-category-und" class="control-label"><?php _e('Tags', 'agrg') ?></label>
-							
-							<?php
-
-								echo "<input type='text' id='post_tags' name='post_tags' value='";
-
-								$posttags = get_the_tags($current_post);
-								if ($posttags) {
-								  foreach($posttags as $tag) {
-									$tags_list = $tag->name . ', '; 
-									echo $tags_list;
-								  }
-								}
-
-							 	echo "' size='12' maxlength='110' class='form-text required'>"; 
-
-							 ?>
-							 <p class="help-block"><?php _e('Use comma for multiple tags (ex: girl, boy, etc).', 'agrg') ?></p>
+							<input type="text" id="post_tags" name="post_tags" value="" size="12" maxlength="110" class="form-text required">
+							<p class="help-block"><?php _e('Use comma for multiple tags (ex: girl, boy, etc).', 'agrg') ?></p>
 
 						</fieldset>
 
@@ -748,13 +609,13 @@ get_header(); ?>
 
 										$params = array( 'width' => 130, 'height' => 130, 'crop' => true );
 
-										echo "<img class='author-avatar' src='" . bfi_thumb( "$large_image_url[0]", $params ) . "' alt='' />";
+										echo "<img class='author-avatar' src='" . bfi_thumb( "$full_img_url", $params ) . "' alt='' />";
 
 									?>
 								</div>
 
-								<input class="featured-image-url" id="featured-image-url" type="text" size="36" name="featured-image-url" style="display: none;" value="<?php if (!empty($large_image_url[0])) { echo $large_image_url[0]; } ?>" />
-							    <input class="featured-image-id" id="featured-image-id" type="text" size="36" name="featured-image-id" style="display: none;" value="<?php if (!empty($large_image_id)) { echo $large_image_id; } ?>" />
+								<input class="featured-image-url" id="featured-image-url" type="text" size="36" name="featured-image-url" style="display: none;" value="" />
+							    <input class="featured-image-id" id="featured-image-id" type="text" size="36" name="featured-image-id" style="display: none;" value="" />
 
 								<span class="full-width-button"><a href="#" class="upload-feat-image"><i class="fa fa-cloud-upload"></i><?php _e( 'Upload New Image', 'agrg' ); ?></a></span>
 								<span class="button_del_feat_image full-width-button"><i class="fa fa-trash-o"></i><?php _e( 'Delete Image', 'agrg' ); ?></span>
@@ -822,28 +683,24 @@ get_header(); ?>
 
 						<div class="hr-line"></div>
 
-						<div id="images_criteria">
+						<div id="_criteria">
 
-							<label for="edit-field-category-und" class="control-label"><?php _e('Additional Images', 'agrg') // TCD_CUSTOM ?></label>
+							<label for="edit-field-category-und" class="control-label"><?php _e('Additional Images', 'agrg') ?></label>
 
 							<?php 
 
 								$i = 0;
 								
-								$attachments = get_children(array('post_parent' => $current_post,
-													'post_status' => 'inherit',
-													'post_type' => 'attachment',
-													'post_mime_type' => 'image',
-													'order' => 'ASC',
-													'orderby' => 'menu_order ID'));
+								$attachments = get_children(array('post_parent' => $post->ID,
+									'post_status' => 'inherit',
+									'post_type' => 'attachment',
+									'post_mime_type' => 'image',
+									'order' => 'ASC',
+									'orderby' => 'menu_order ID'));
 
 								foreach($attachments as $att_id => $attachment) {
-													$attachment_ID = $attachment->ID;
-													$full_img_url = wp_get_attachment_url($attachment->ID);
-													$split_pos = strpos($full_img_url, 'wp-content');
-													$split_len = (strlen($full_img_url) - $split_pos);
-													$abs_img_url = substr($full_img_url, $split_pos, $split_len);
-													$full_info = @getimagesize(ABSPATH.$abs_img_url);
+
+									$full_img_url = wp_get_attachment_url($attachment->ID);
 									$full_img_id = $attachment->ID;
 
 									$i++;
@@ -851,6 +708,8 @@ get_header(); ?>
 							?>
 								
 							<div class="option_item" id="<?php echo $i; ?>">
+
+								<div class="option_item" id="<?php echo $i; ?>">
 
 								<div class="my-account-author-image">
 
@@ -865,8 +724,8 @@ get_header(); ?>
 									?>
 								</div>
 
-								<input class="listing_image_url" id="listing_image_url[<?php echo $i; ?>][0]" type="text" size="36" name="listing_image_url[<?php echo $i; ?>][0]" style="display: none;" value="<?php echo $full_img_url; ?>" />
-							    <input class="listing_image_id" id="listing_image_url[<?php echo $i; ?>][1]" type="text" size="36" name="listing_image_url[<?php echo $i; ?>][1]" style="display: none;" value="<?php echo $full_img_id; ?>" />
+								<input class="listing_image_url" id="listing_image_url<?php echo $i; ?>[0]" type="text" size="36" name="listing_image_url<?php echo $i; ?>[0]" style="display: none;" value="<?php echo $full_img_url; ?>" />
+							    <input class="listing_image_id" id="listing_image_url<?php echo $i; ?>[1]" type="text" size="36" name="listing_image_url<?php echo $i; ?>[1]" style="display: none;" value="<?php echo $full_img_id; ?>" />
 
 								<span class="full-width-button"><a href="#" class="upload-author-image"><i class="fa fa-cloud-upload"></i><?php _e( 'Upload New Image', 'agrg' ); ?></a></span>
 								<span class="button_del_image full-width-button"><i class="fa fa-trash-o"></i><?php _e( 'Delete Image', 'agrg' ); ?></span>
@@ -927,6 +786,7 @@ get_header(); ?>
 										});
 								</script>
 									
+									
 							</div>
 								
 							<?php 
@@ -941,8 +801,15 @@ get_header(); ?>
 
 								<div class="my-account-author-image">
 
-									<img class='author-avatar' src='' alt='' />
+									<?php require_once(TEMPLATEPATH . '/inc/BFI_Thumb.php'); ?>
 
+									<?php 
+
+										$params = array( 'width' => 130, 'height' => 130, 'crop' => true );
+
+										echo "<img class='author-avatar' src='" . bfi_thumb( "$full_img_url", $params ) . "' alt='' />";
+
+									?>
 								</div>
 
 								<input class="listing_image_url" id="" type="text" size="36" name="" style="display: none;" value="" />
@@ -1013,7 +880,7 @@ get_header(); ?>
 
 						<fieldset class="input-full-width">
 
-							<input class="listing_total_images" id="listing_total_images" type="text" size="36" name="listing_total_images" style="display: none;" value="" />
+							<input class="listing_total_" id="listing_total_" type="text" size="36" name="listing_total_" style="display: none;" value="" />
 							
 							<button type="button" name="submit_add_image" id='submit_add_image' value="add" class="button-secondary"><i class="fa fa-plus-circle"></i> <?php _e( 'Add new image', 'agrg' ); ?></button>
 							
@@ -1024,7 +891,7 @@ get_header(); ?>
 						<fieldset class="input-title">
 
 							<label for="edit-field-category-und" class="control-label"><?php _e('Video', 'agrg') ?></label>
-							<textarea name="video" id="video" cols="8" rows="5" ><?php echo $post_video; ?></textarea>
+							<textarea name="video" id="video" cols="8" rows="5" ></textarea>
 							<p class="help-block"><?php _e('Add video embedding code here (youtube, vimeo, etc)', 'agrg') ?></p>
 
 						</fieldset>
@@ -1045,43 +912,9 @@ get_header(); ?>
 
 							<label for="edit-field-category-und" class="control-label"><?php _e('Ad Type', 'agrg') ?></label>
 
-								<?php
-
-									$featured_post = "0";
-
-									$post_price_plan_activation_date = get_post_meta($current_post, 'post_price_plan_activation_date', true);
-									$post_price_plan_expiration_date = get_post_meta($current_post, 'post_price_plan_expiration_date', true);
-									$post_price_plan_expiration_date_noarmal = get_post_meta($current_post, 'post_price_plan_expiration_date_normal', true);
-									$todayDate = strtotime(date('m/d/Y h:i:s'));
-								    $expireDate = $post_price_plan_expiration_date;
-
-									if(!empty($post_price_plan_activation_date)) {
-
-										if(($todayDate < $expireDate) or $post_price_plan_expiration_date == 0) {
-											$featured_post = "1";
-										}
-
-									} 
-
-								?>
-
-								<?php if($featured_post == "1") { ?>
-
-									<div class="field-type-list-boolean field-name-field-featured field-widget-options-onoff form-wrapper" id="edit-field-featured">
-
-										<label class="option checkbox control-label" for="edit-field-featured-und">
-											<input style="margin-right: 10px;" type="radio" id="feature-post" name="feature-post" value="featured" class="form-checkbox" checked><?php _e('Featured. Expires:', 'agrg') ?> <?php if($post_price_plan_expiration_date_noarmal == 0) { ?> <?php _e( 'Never', 'agrg' ); ?> <?php } else { echo $post_price_plan_expiration_date_noarmal; } ?>
-										</label>
-
-									</div>
-
-								<?php } else { ?>
-
 								<?php if($featPlanMesage != '') { ?>
-
 									<span class="error" style="color: #d20000; margin-bottom: 20px; font-size: 18px; font-weight: bold; float: left;"><?php echo $featPlanMesage; ?></span>
 									<div class="clearfix"></div>
-
 								<?php } ?>
 
 								<div class="field-type-list-boolean field-name-field-featured field-widget-options-onoff form-wrapper" id="edit-field-featured">
@@ -1139,7 +972,7 @@ get_header(); ?>
 									<?php if($featuredADS != "0"){ ?>
 
 										<label class="option checkbox control-label" for="edit-field-featured-und">
-											<input style="margin-right: 10px;" type="radio" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox" <?php if($featured_post == "0") { ?>checked<?php } ?>>Regular
+											<input style="margin-right: 10px;" type="radio" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox" checked><?php _e( 'Regular', 'agrg' ); ?>
 										</label>
 
 									<?php } ?>
@@ -1157,9 +990,7 @@ get_header(); ?>
 										<p><?php _e( 'Currently you have no active plan. You must purchase a', 'agrg' ); ?> <a href="<?php echo $featured_plans; ?>" target="_blank"><?php _e( 'Featured Pricing Plan', 'agrg' ); ?></a> <?php _e( 'to be able to publish a Featured Ad.', 'agrg' ); ?></p>
 									<?php } ?>
 
-								</div>
-
-							<?php } ?>
+							</div>
 
 						</fieldset>
 
@@ -1170,7 +1001,7 @@ get_header(); ?>
 						<div class="publish-ad-button">
 							<?php wp_nonce_field('post_nonce', 'post_nonce_field'); ?>
 							<input type="hidden" name="submitted" id="submitted" value="true" />
-							<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><?php _e('Update Item', 'agrg')  // TCD_CUSTOM ?></button>
+							<button class="btn form-submit" id="edit-submit" name="op" value="Post Item" type="submit"><?php _e('Post Item', 'agrg') ?></button>
 						</div>
 
 					</form>
