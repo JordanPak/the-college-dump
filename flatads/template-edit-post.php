@@ -824,7 +824,7 @@ get_header(); ?>
 
 						<div id="images_criteria">
 
-							<label for="edit-field-category-und" class="control-label"><?php _e('Images', 'agrg') ?></label>
+							<label for="edit-field-category-und" class="control-label"><?php _e('Additional Images', 'agrg') // TCD_CUSTOM ?></label>
 
 							<?php 
 
@@ -1170,7 +1170,7 @@ get_header(); ?>
 						<div class="publish-ad-button">
 							<?php wp_nonce_field('post_nonce', 'post_nonce_field'); ?>
 							<input type="hidden" name="submitted" id="submitted" value="true" />
-							<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><?php _e('Update Ad', 'agrg') ?></button>
+							<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><?php _e('Update Item', 'agrg')  // TCD_CUSTOM ?></button>
 						</div>
 
 					</form>
