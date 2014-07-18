@@ -236,7 +236,9 @@ get_header(); ?>
 														
 							<br />
 
-							<p style="margin-top: 20px;"><?php _e("Human test. Please input the result of 5+3=?", "agrg"); ?></p>
+							<p style="margin-top: 20px;"><?php _e("Quick, what's 5+3=?", "agrg"); // TCD_CUSTOM  ?></p>
+							<!--<p style="margin-top: 20px;"><?php  // _e("Human test. Please input the result of 5+3=?", "agrg"); ?></p>-->
+
 
 							<input type="text" onfocus="if(this.value=='')this.value='';" onblur="if(this.value=='')this.value='';" name="humanTest" id="humanTest" value="" class="input-textarea" />
 
