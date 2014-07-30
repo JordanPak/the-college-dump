@@ -531,7 +531,7 @@ get_header(); ?>
 
 						<fieldset class="input-title">
 
-							<label for="edit-title" class="control-label"><?php _e('Location', 'agrg') ?></label>
+							<label for="edit-title" class="control-label"><?php _e('University', 'agrg') // TCD_CUSTOM ?></label>
 							<input type="text" id="post_location" name="post_location" value="<?php echo $post_location; ?>" size="12" maxlength="110" class="form-text required">
 
 						</fieldset>

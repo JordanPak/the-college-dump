@@ -210,7 +210,6 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 
 		$listing_image_url = $_POST['listing_image_url'];
 
-<<<<<<< HEAD
 		$listing_total_images = $_POST['listing_total_images'];
 
 		if(empty($listing_total_images)) {
@@ -218,15 +217,6 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		}
 
 		for ($i = 0; $i <= $listing_total_images; $i++) {
-=======
-		$listing_total_ = $_POST['listing_total_'];
-
-		if(empty($listing_total_)) {
-			$listing_total_ = count($listing_image_url);
-		}
-
-		for ($i = 0; $i <= $listing_total_; $i++) {
->>>>>>> 3bcd5fe2dc41ba5466169a29f62863bd73c691e3
 
 			if(!empty($listing_image_url[$i][0])) {
 
@@ -244,11 +234,7 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 
 		if(empty($featured_image_url)) {
 
-<<<<<<< HEAD
 			$image_url = get_template_directory()."/images/no-image.png";
-=======
-			$image_url = get_template_directory()."//no-image.png";
->>>>>>> 3bcd5fe2dc41ba5466169a29f62863bd73c691e3
 
 			$upload_dir = wp_upload_dir();
 			$image_data = file_get_contents($image_url);
@@ -421,7 +407,7 @@ get_header(); ?>
 
 						<fieldset class="input-title">
 
-							<label for="edit-title" class="control-label"><?php _e('Location', 'agrg') ?></label>
+							<label for="edit-title" class="control-label"><?php _e('University', 'agrg') // TCD_CUSTOM ?></label>
 							<input type="text" id="post_location" name="post_location" value="" size="12" maxlength="110" class="form-text required">
 
 						</fieldset>
@@ -697,15 +683,9 @@ get_header(); ?>
 
 						<div class="hr-line"></div>
 
-<<<<<<< HEAD
 						<div id="images_criteria">
 
 							<label for="edit-field-category-und" class="control-label"><?php _e('Additional Images', 'agrg') // TCD_CUSTOM ?></label>
-=======
-						<div id="_criteria">
-
-							<label for="edit-field-category-und" class="control-label"><?php _e('Additional Images', 'agrg') ?></label>
->>>>>>> 3bcd5fe2dc41ba5466169a29f62863bd73c691e3
 
 							<?php 
 
@@ -900,11 +880,7 @@ get_header(); ?>
 
 						<fieldset class="input-full-width">
 
-<<<<<<< HEAD
 							<input class="listing_total_images" id="listing_total_images" type="text" size="36" name="listing_total_images" style="display: none;" value="" />
-=======
-							<input class="listing_total_" id="listing_total_" type="text" size="36" name="listing_total_" style="display: none;" value="" />
->>>>>>> 3bcd5fe2dc41ba5466169a29f62863bd73c691e3
 							
 							<button type="button" name="submit_add_image" id='submit_add_image' value="add" class="button-secondary"><i class="fa fa-plus-circle"></i> <?php _e( 'Add new image', 'agrg' ); ?></button>
 							
@@ -997,6 +973,7 @@ get_header(); ?>
 
 										<label class="option checkbox control-label" for="edit-field-featured-und">
 											<input style="margin-right: 10px;" type="radio" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox" checked><?php _e( 'Regular', 'agrg' ); ?>
+
 										</label>
 
 									<?php } ?>
@@ -1025,11 +1002,7 @@ get_header(); ?>
 						<div class="publish-ad-button">
 							<?php wp_nonce_field('post_nonce', 'post_nonce_field'); ?>
 							<input type="hidden" name="submitted" id="submitted" value="true" />
-<<<<<<< HEAD
 							<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><?php _e('Post Item', 'agrg') // TCD_CUSTOM ?></button>
-=======
-							<button class="btn form-submit" id="edit-submit" name="op" value="Post Item" type="submit"><?php _e('Post Item', 'agrg') ?></button>
->>>>>>> 3bcd5fe2dc41ba5466169a29f62863bd73c691e3
 						</div>
 
 					</form>
@@ -1293,6 +1266,7 @@ get_header(); ?>
 	    </div>
 
     </section>
+
 
 
 
