@@ -693,7 +693,7 @@ if(isset($_POST['submitted'])) {
 
 	    		<div class="related-ads">
 
-	    			<h2><?php _e( 'Related Ads', 'agrg' ); ?></h2>
+	    			<h2><?php /* TCD_CUSTOM */ _e( 'Related Posts', 'agrg' ); ?></h2>
 
 	    			<div class="full">
 

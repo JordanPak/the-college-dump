@@ -736,7 +736,7 @@ get_header(); ?>
 
 						<div id="feat_image">
 
-							<label for="edit-field-category-und" class="control-label"><?php _e('Featured Image', 'agrg') ?></label>
+							<label for="edit-field-category-und" class="control-label"><?php /* TCD_CUSTOM */ _e('Upload Your Image', 'agrg') ?></label>
 								
 							<div class="option_item" id="featIMG">
 
