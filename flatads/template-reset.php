@@ -42,12 +42,12 @@ if (!$user_ID) {
 
 					wp_set_password( $new_password, $user_ID );
 
-					$message = "<?php _e( 'Check your email for new password.', 'agrg' ); ?>";
+					$message = "Check your email for new password.";
 
 			      	$from = get_option('admin_email');
-					$headers = '<?php _e( 'From:', 'agrg' ); ?> '.$from . "\r\n";
-					$subject = "<?php _e( 'Password reset!', 'agrg' ); ?>";
-					$msg = "<?php _e( 'Reset password.', 'agrg' ); ?>\n<?php _e( 'Your login details', 'agrg' ); ?>\n<?php _e( 'New Password:', 'agrg' ); ?> $new_password";
+					$headers = 'From: '.$from . "\r\n";
+					$subject = "Password reset!";
+					$msg = "Reset password.\nYour login details\nNew Password: $new_password";
 					wp_mail( $email_addr, $subject, $msg, $headers );
 
 					$resetSuccess = 1;
@@ -56,12 +56,12 @@ if (!$user_ID) {
 
 		    } else {
 
-		      	$message = "<?php _e( 'There is no user available for this email.', 'agrg' ); ?>";
+		      	$message = "There is no user available for this email.";
 
 		    } // end if/else
 
 		} else {
-			$message = "<?php _e( 'Email should not be empty.', 'agrg' ); ?>";
+			$message = "Email should not be empty.";
 		}
 
 	}
